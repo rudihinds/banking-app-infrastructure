@@ -2,8 +2,8 @@ def github_id = 'CHANGE_ME'
 
 def git_repository = "https://github.com/${github_id}/banking-app-infrastructure.git"
 def namespace = github_id.toLowerCase()
-def rabbitmq_host = "${namespace}-rabbit.apps.dev.practices.armakuni.co.uk"
-def app_host = "${namespace}-app.apps.dev.practices.armakuni.co.uk"
+def rabbitmq_host = "${namespace}-rabbit.apps.prod.practices.armakuni.co.uk"
+def app_host = "${namespace}-app.apps.prod.practices.armakuni.co.uk"
 def kubectl_image = 'sepractices/jenkins-eks-kubectl-deployer:0.1.0'
 def label = "build-${UUID.randomUUID().toString()}"
 def cluster_name = "prod-ak-k8s-cluster"
