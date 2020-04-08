@@ -6,14 +6,14 @@ metadata:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: banking-rabbit.apps.dev.practices.armakuni.co.uk
+  - host: banking-rabbit.apps.prod.practices.armakuni.co.uk
     http:
       paths:
       - path: /
         backend:
           serviceName: message-bus
           servicePort: management
-  - host: banking-demo.apps.dev.practices.armakuni.co.uk
+  - host: banking-demo.apps.prod.practices.armakuni.co.uk
     http:
       paths:
         - path: /cashier/
