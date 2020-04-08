@@ -36,7 +36,8 @@ podTemplate(name: "${namespace}-app-infrastructure-build", label: label, yaml: b
               --server=$KUBERNETES_SERVER \
               --certificate-authority=$KUBERNETES_CA
           '''
-          sh """kubectl config \
+          sh """
+            kubectl config \
               set-credentials aws \
               --exec-arg=token \
               --exec-arg=-i \
